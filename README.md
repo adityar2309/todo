@@ -1,156 +1,133 @@
+# Todo Frontend Application
 
-# Full Stack Todo Application
-
-A modern todo application built with Flask (Python) backend and React frontend.
+A modern React-based todo application with a clean and responsive user interface.
 
 ## Features
 
-- Create, Read, Update, and Delete todos
+- Create, read, update, and delete todos
 - Mark todos as complete/incomplete
-- Real-time error handling and user feedback
+- Real-time error handling and feedback
+- Loading states and empty states
 - Responsive design
-- Persistent storage using SQLite database
-- RESTful API architecture
+- Form validation
+- Timestamp display
+- Confirmation dialogs for destructive actions
 
 ## Tech Stack
 
-### Backend
-- Flask
-- SQLAlchemy
-- Flask-Migrate
-- Flask-CORS
-- SQLite
-
-### Frontend
-- React
+- React 18
 - Modern JavaScript (ES6+)
-- CSS3
+- CSS3 with Flexbox
+- Fetch API for HTTP requests
 
 ## Getting Started
 
-### Prerequisites
-- Python 3.8 or higher
-- Node.js 14 or higher
-- npm or yarn
-
-### Backend Setup
-
-1. Navigate to the backend directory:
-```bash
-cd todo-api
-
-2. Create and activate a virtual environment:
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows use: venv\Scripts\activate
-```
-
-3. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-4. Initialize the database:
-```bash
-flask db upgrade
-```
-
-5. Run the backend server:
-```bash
-python run.py
-```
-
-The backend will be available at `http://localhost:5000`
-
-### Frontend Setup
-
-1. Navigate to the frontend directory:
-```bash
-cd todo-frontend
-```
-
+1. Clone the repository
 2. Install dependencies:
 ```bash
 npm install
 ```
 
-3. Run the development server:
+3. Start the development server:
 ```bash
 npm start
 ```
 
-The frontend will be available at `http://localhost:3000`
+The application will be available at `http://localhost:3000`
 
-## API Endpoints
+## Application Structure
 
-### GET /api/v1/todos
-- Retrieves all todos
-- Returns: Array of todo objects
-
-### POST /api/v1/todos
-- Creates a new todo
-- Required fields: title
-- Optional fields: description, completed
-
-### PUT /api/v1/todos/<id>
-- Updates a specific todo
-- Parameters: id (todo ID)
-- Fields: title, description, completed
-
-### DELETE /api/v1/todos/<id>
-- Deletes a specific todo
-- Parameters: id (todo ID)
-
-## Project Structure
-
+The main application component (App.js) contains:
+```javascript:todo-frontend/src/App.js
+startLine: 4
+endLine: 175
 ```
-todo-app/
-├── todo-api/               # Backend
-│   ├── app/
-│   │   ├── __init__.py    # App initialization
-│   │   ├── models.py      # Database models
-│   │   ├── routes.py      # API endpoints
-│   │   └── config.py      # Configuration
-│   ├── migrations/        # Database migrations
-│   └── requirements.txt   # Python dependencies
-│
-└── todo-frontend/         # Frontend
-    ├── src/
-    │   ├── App.js         # Main React component
-    │   ├── App.css        # Styles
-    │   └── index.js       # Entry point
-    └── package.json       # Node.js dependencies
+
+## State Management
+
+The application manages the following states:
+- Todos list
+- Form inputs (title, description)
+- Loading state
+- Error messages
+
+## API Integration
+
+The frontend communicates with the backend through RESTful API endpoints:
+
+- GET /api/v1/todos - Fetch all todos
+- POST /api/v1/todos - Create new todo
+- PUT /api/v1/todos/:id - Update todo status
+- DELETE /api/v1/todos/:id - Delete todo
+
+## Styling
+
+The application uses a custom CSS file for styling:
+```css:todo-frontend/src/App.css
+startLine: 1
+endLine: 20
 ```
+
+Key styling features:
+- Responsive layout
+- Clean and modern design
+- Consistent spacing and typography
+- Visual feedback for user actions
+- Smooth transitions
+
+## Error Handling
+
+The application implements comprehensive error handling:
+- Network errors
+- API errors
+- Form validation
+- User feedback through error messages
+- Automatic error message dismissal
 
 ## Development
 
-- Backend uses Flask's development server with debug mode enabled
-- Frontend uses Create React App's development server with hot reloading
-- SQLite database for easy development setup
-
-## Production Deployment
-
-1. Build the frontend:
+1. Make code changes
+2. Test locally with:
 ```bash
-cd todo-frontend
+npm test
+```
+
+3. Build for production:
+```bash
 npm run build
 ```
 
-2. Configure the backend:
-- Set `SECRET_KEY` environment variable
-- Configure production database URL in `DATABASE_URL`
-- Disable debug mode
-- Use a production-grade WSGI server (e.g., Gunicorn)
+## Available Scripts
 
-## License
+- `npm start` - Runs development server
+- `npm test` - Runs test suite
+- `npm run build` - Creates production build
+- `npm run eject` - Ejects from Create React App
 
-MIT License
+## Production Deployment
+
+1. Create production build:
+```bash
+npm run build
+```
+
+2. Deploy the contents of the `build` directory to your hosting service
+
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
 
 ## Contributing
 
 1. Fork the repository
 2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
+3. Make your changes
+4. Submit a pull request
+
+## License
+
+MIT License
 ```
