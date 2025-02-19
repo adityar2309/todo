@@ -1,4 +1,4 @@
-```markdown
+
 # Full Stack Todo Application
 
 A modern todo application built with Flask (Python) backend and React frontend.
@@ -38,7 +38,6 @@ A modern todo application built with Flask (Python) backend and React frontend.
 1. Navigate to the backend directory:
 ```bash
 cd todo-api
-```
 
 2. Create and activate a virtual environment:
 ```bash
