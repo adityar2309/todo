@@ -155,5 +155,3 @@ MIT License
 4. Push to the branch
 5. Create a Pull Request
 ```
-
-This README provides a comprehensive overview of your application, setup instructions, and development guidelines. It references the structure shown in your codebase and includes all the necessary information for both developers and users to get started with the application.
