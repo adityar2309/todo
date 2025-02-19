@@ -1,5 +1,3 @@
-Here's an appropriate README.md for your Todo application:
-
 ```markdown
 # Full Stack Todo Application
 
